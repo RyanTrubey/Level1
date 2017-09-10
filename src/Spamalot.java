@@ -14,7 +14,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class Spamalot implements ActionListener{
+public class Spamalot implements ActionListener {
 	JPanel panel = new JPanel();
 	JFrame frame = new JFrame();
 	JTextField text = new JTextField(20);
@@ -22,8 +22,11 @@ public class Spamalot implements ActionListener{
 	JButton Good = new JButton("GOOD");
 	static final String FAKE_USERNAME = "thisisanemail385@gmail.com";
 	static final String FAKE_PASSWORD = "SoupIsSpam";
+	static String email;
+	
 	public static void main(String[] args) {
 		Spamalot Spam = new Spamalot();
+		
 	}
 
 	Spamalot() {
@@ -37,6 +40,7 @@ public class Spamalot implements ActionListener{
 		Good.addActionListener(this);
 		Bad.addActionListener(this);
 	}
+
 	private boolean sendSpam(String recipient, String subject, String content) {
 
 		Properties props = new Properties();
@@ -62,16 +66,19 @@ public class Spamalot implements ActionListener{
 			return true;
 
 		} catch (MessagingException e) {
-e.printStackTrace();
-return false;
+			e.printStackTrace();
+			return false;
 		}
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		
-		
+		if(e.getSource() == Good) {
+			sendSpam(text.getText(),  "spam", "this is spam");
+			System.out.println(text.getText());
+		}
+
 	}
 
 }
