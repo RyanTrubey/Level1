@@ -29,7 +29,8 @@ import java.io.File;
 public class Jeopardy implements ActionListener {
 	private JButton firstButton;
 	private JButton secondButton;
-	private JButton thirdButton, fourthButton;
+	private JButton thirdButton;
+	private JButton fourthButton;
 	
 	private JPanel quizPanel;
 	int score = 0;
@@ -67,11 +68,17 @@ public class Jeopardy implements ActionListener {
 		
 		// 9. Use the secondButton variable to hold a button using the createButton method
 			secondButton = createButton("100");
+			thirdButton = createButton("200");
+			fourthButton = createButton("200");
 		// 10. Add the secondButton to the quizPanel
 			quizPanel.add(secondButton);
+			quizPanel.add(thirdButton);
+			quizPanel.add(fourthButton);
 		// 11. Add action listeners to the buttons (2 lines of code)
 			firstButton.addActionListener(this);
 			secondButton.addActionListener(this);
+			thirdButton.addActionListener(this);
+			fourthButton.addActionListener(this);
 		// 12. Fill in the actionPerformed() method below
 				
 		frame.pack();
@@ -110,7 +117,7 @@ public class Jeopardy implements ActionListener {
 		JButton buttonPressed = (JButton) arg0.getSource();
 		// If the buttonPressed was the firstButton
 			if(buttonPressed == firstButton) {
-				askQuestion("What is the dinosaur species that throws rocks at its prey?", "the dinosaur that doesn't throw rocks.", 100);
+				askQuestion("What is the dinosaur species that throws rocks at its prey?", "the dinosaur that doesn't throw rocks", 100);
 				firstButton.setText("");
 			}
 			// Call the askQuestion() method
@@ -119,9 +126,18 @@ public class Jeopardy implements ActionListener {
 		
 		// Or if the buttonPressed was the secondButton
 			if(buttonPressed == secondButton) {
-				askQuestion("How do cats help the cat-throwing Dinosaur?", "Cats give this dinosaur ammo.", 100);
+				askQuestion("How do cats help the cat-throwing Dinosaur?", "They give it ammo", 100);
 				secondButton.setText("");
 			}
+			if(buttonPressed == thirdButton) {
+				askQuestion("What is the cat-throwing Dinosaur?", "a walrus in disguise", 200);
+				thirdButton.setText("");
+			}
+			if(buttonPressed == fourthButton) {
+				askQuestion("how does a walrus help the cat-throwing dinosaur?", "it is the cat-throwing dinosaur", 200);
+				fourthButton.setText("");
+			}
+			
 
 			// Call the askQuestion() method with a harder question
 			

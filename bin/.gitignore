@@ -10,6 +10,7 @@
 /FortuneTeller.class
 /HarryPotter.class
 /Houses.class
+/Jeopardy.class
 /Magic8Ball.class
 /Pencil.class
 /PhotoQuiz.class
@@ -24,4 +25,6 @@
 /Supply.class
 /Textbook.class
 /Thing.png
-/Jeopardy.class
+/level1/
+/ChuckleClicker.class
+/CutenessTV.class
