@@ -29,7 +29,7 @@ public class CowTimer {
 		 * using Thread.sleep(int milliseconds).
 		 */
 
-		while (minutes >= 0) {
+		while (minutes > 0) {
 			System.out.println(minutes);
 			Thread.sleep(60000);
 			minutes--;
