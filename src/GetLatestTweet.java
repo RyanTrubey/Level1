@@ -60,6 +60,7 @@ public class GetLatestTweet implements ActionListener {
 			String s = "";
 			for(int i = 0; i < 10; i++) {
 				s += result.getTweets().get(i).getText();
+				s += "\n";
 				System.out.println();
 			}
 			return s;
