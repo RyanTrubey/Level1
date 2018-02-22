@@ -19,7 +19,10 @@
 /Houses.class
 /Jeopardy.class
 /Jukebox.class
+/LotteryNumbers.class
 /Magic8Ball.class
+/Memes.class
+/MemesRunner.class
 /Methods.class
 /Microwave.class
 /Minion.class
@@ -35,6 +38,7 @@
 /Runner.class
 /SeaCreature.class
 /SeaCreaturesRunner.class
+/SensitiveKeyboard.class
 /Smurf.class
 /Smurfs.class
 /Song.class
@@ -55,7 +59,12 @@
 /TeaPartyTest.class
 /TypingTutor.class
 /Whackamole.class
-/Memes.class
-/MemesRunner.class
-/LotteryNumbers.class
-/SensitiveKeyboard.class
+/CandyMan.class
+/SlotMachine$TimerUpdate.class
+/SlotMachine.class
+/banana.png
+/cherry.png
+/orange.png
+/VaultRunner.class
+/Vault.class
+/JamesBond.class
