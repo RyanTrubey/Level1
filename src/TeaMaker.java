@@ -1,3 +1,5 @@
+
+
 // Copyright Wintriss Technical Schools 2013
 public class TeaMaker {
 public static void main(String[] args) {
@@ -5,9 +7,7 @@ public static void main(String[] args) {
 	Kettle kettle = new Kettle();
 	Cup cup = new Cup();
 	kettle.boil();
-	Water water = new Water();
-	Water w2 = kettle.getWater();
-	cup.makeTea("green", );
+	cup.makeTea(teabag, kettle.getWater());
 }
 	/* Figure out how to make a cup of tea using the classes below */
 
